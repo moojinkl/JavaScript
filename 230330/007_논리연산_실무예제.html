@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>논리연산 실무예제</title>
+  </head>
+  <body>
+    <script>
+      // https://codingdojang.com/scode/350#answer-filter-area
+
+      for (let i = 0; i < 101; i++) {
+        // console.log(i);
+        if (i % 3 == 0 && i % 5 == 0) {
+          // 3과 5의 공배수, 둘 다 true여야 해서 &&(and)
+          console.log(i);
+        }
+      }
+
+      for (let i = 0; i < 101; i++) {
+        // console.log(i);
+        if (i % 3 == 0 || i % 5 == 0) {
+          // 3의 배수와 5의 배수 전부 표시
+          console.log(i);
+        }
+      }
+
+      let x = 0;
+      for (let i = 0; i < 1001; i++) {
+        // console.log(i)
+        if (i % 3 == 0 || i % 5 == 0) {
+          x = x + i;
+        }
+      }
+      console.log(x);
+
+      // 연산자 우선순위
+      // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+    </script>
+  </body>
+</html>
