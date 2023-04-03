@@ -6,15 +6,15 @@ console.log(x > y); // false
 let a = true;
 let b = false;
 
-console.log(a && b);
+console.log(a && b); // false
 
 // true, false가 아닌 값을 and, or연산 했을 경우 단락회로평가를 하게 됩니다.
 let a2 = "hello";
 let b2 = "";
 
-console.log(a2 && b2);
+console.log(a2 && b2); // "", 첫번째 falsy한 값을 찾습니다. 둘 다 truthy한 값이면 두번째 피연산자에서 평가 결과가 결정됩니다.
 
-// 암기
+// 암기 : 0, undefined, null, NaN만 false
 console.log(Boolean("hello")); // t
 console.log(Boolean("")); // f
 console.log(Boolean([1, 2, 3])); // t
