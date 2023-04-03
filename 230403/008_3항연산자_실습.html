@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number 연산</title>
+  </head>
+  <body>
+    <script>
+      // 3항 연산자 실습1
+      // 통장에 10000원 초과해서 있으면 '부자'
+      //통장에 10000원 이하 있으면 '부를 바라는 자'
+
+      const money = 9000;
+      const person = 10000 < money ? "부자" : "부를 바라는 자";
+      console.log(person);
+
+      // 3항 연산자 실습2
+      // 통장에 100000원 초과해서 있으면 '초부자'
+      // 통장에 10000원 초과해서 있으면 '부자'
+      // 통장에 10000원 이하 있으면 '부를 바라는 자'
+      const money2 = 11000;
+      const person2 =
+        100000 < money2 ? "초부자" : 10000 < money2 ? "부자" : "부를 바라는 자";
+      console.log(person2);
+    </script>
+  </body>
+</html>

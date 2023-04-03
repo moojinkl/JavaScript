@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주니어가 자주 실수하는 코드</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+      let y = 20;
+
+      x = x + 10; // 대입 연산이 마지막으로 적용된다.
+    </script>
+    <script>
+      let x = 100; // x가 이미 선언 되었기 떄문에 재정의를 허락하지 않습니다.
+
+      // 1000줄의 코드
+
+      console.log(x); // 10이 출력이 되기를 기대하면 안됩니다.
+      console.log(y);
+    </script>
+  </body>
+</html>
