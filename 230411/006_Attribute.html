@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute 메소드</title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <p id="myTxt">hello lions</p>
+    <img
+      src="https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg"
+    />
+    <script>
+      const target = document.querySelector("p");
+      const myimg = document.querySelector("img");
+      const idAttr = target.getAttribute("id"); // 요소의 특정 속성 값에 접근합니다.
+      console.log(idAttr);
+      myimg.setAttribute(
+        "src",
+        "https://img.wendybook.com/image_detail/img159/159599_01.jpg"
+      );
+      // 요소의 특정 속성 값에 접근하여 값을 수정합니다.
+    </script>
+  </body>
+</html>
