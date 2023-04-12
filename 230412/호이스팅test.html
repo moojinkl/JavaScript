@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호스팅 TEST</title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <script src="./b.js"></script>
+    <script src="./a.js"></script>
+    <!-- a, b 파일의 순서를 바꾸면 안됩니다. -->
+    <script src="./aa.js"></script>
+    <script src="./bb.js"></script>
+    <!-- a.js에서 x를 이미 선언했기 때문에 aa에서 x를 재선언하면 error가 납니다. => 함수로 감싸주셔야 합니다. -->
+  </body>
+</html>
