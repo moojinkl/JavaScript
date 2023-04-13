@@ -82,7 +82,7 @@ let s = new Set("aabbbccccdd".split(""));
 // let s = new Set(["a", "a", "b", "b", "b", "c", "c", "c", "c", "d", "d"])
 
 s.forEach((value, value, set) => {});
-// array와 다르게 value가
+// array와 다르게 value가 2번 반복입니다.
 // IE10은 미지원
 
 s.forEach((a, b, set) => {
