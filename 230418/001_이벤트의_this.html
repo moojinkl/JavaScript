@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트의 this</title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <article class="parent">
+      <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ol>
+    </article>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      parent.addEventListener("click", function (event) {
+        console.log(this); // parent
+        console.log(event.currentTarget); // parent
+      });
+      // 이벤트 리스너 함수 내부에서의 this 값은 이벤트가 연결된 노드를 참조합니다.
+
+      parent.addEventListener("click", (event) => {
+        console.log(this); // window
+        console.log(event.currentTarget); // window
+      });
+      // ※주의! 만약 이벤트 리스너 함수를 화살표 함수로 사용한다면 this의 대상이 달라집니다.
+      // 화살표 함수는 자신을 감싸고 있는 상위스코프를 가리킵니다.
+
+      const btnFirst = document.querySelector(".btn-first");
+
+      const myObj = {
+        nameObj: "testObj",
+        test() {
+          btnFirst.addEventListener("click", () => {
+            console.log(this.nameObj); // 상위 스코프는 myObj입니다.
+          });
+        },
+      };
+
+      myObj.test();
+    </script>
+  </body>
+</html>
