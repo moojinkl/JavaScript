@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <script>
+      const testArray = [1, 2, 3, 4];
+      testArray.push(5); // [1, 2, 3, 4, 5]
+      // 시간 : 0(1)
+
+      testArray.pop(); // 마지막 요소를 제거
+      // 0(1)
+
+      testArray.unshift(0); // [0, 1, 2, 3, 4, 5]
+      // index 값이 바뀐다.
+      // 0(n)
+
+      testArray.splice(2, 1, 6); // 0(1) ~ 0(n)
+    </script>
+  </body>
+</html>
